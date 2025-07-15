@@ -2,6 +2,10 @@
 
 Create mods for Arcaneering: Beyond Automation using this standalone Godot project.
 
+## Security Notice
+
+**This modding system is security-safe.** Unlike typical Godot resource loading, mod `.tres` files are never executed as code. Instead, they are read as plain text and manually parsed for properties only. The export process strips all script references and ExtResource links, ensuring no arbitrary code execution is possible.
+
 ## Quick Start
 
 1. **Add assets** to `assets/icons/` and `assets/meshes/`
