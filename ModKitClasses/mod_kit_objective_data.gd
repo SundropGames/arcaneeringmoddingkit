@@ -12,3 +12,4 @@ class_name ModKitObjectiveData
 @export var target_resource_type: int = 0  # Whether threshold applies to any specific resource (Enum); only relevant for check_type = 1
 @export var chest_type: int = 0  # Whether threshold applies to any specific chest type (Enum); only relevant for check_type = 5
 @export var dependencies: Array[String] = []  # Pre-requisite objectives that need to be fulfilled to show & complete this objective
+@export var research_dependencies: Array[String] = []  # Pre-requisite research that need to be completed to show & complete this objective
