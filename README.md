@@ -10,8 +10,8 @@ Create mods for Arcaneering: Beyond Automation using this standalone Godot proje
 
 1. **Add assets** to `assets/icons/` and `assets/meshes/`
 2. **Create mod content** in `working/` folders using the ModKit classes
-3. **Run export tool** (Tools → Execute Script → mod_export_tool.gd)
-4. **Copy exported mod** from `exported_mods/` to game's `user://mods/`
+3. **Run export tool** (Tools → Execute Script → mod_export_tool.gd); **Note:** Sometimes the Godot Editor only updates the new folder after minimizing & maximizing Godot
+4. **Copy exported mod** from `exported_mods/` to `%APPDATA%/Godot/app_userdata/Arcaneering/mods/` or directly into the game's `user://mods/`
 
 ## File Structure
 
@@ -25,7 +25,8 @@ ArcaneeringModdingKit/
 ├── assets/               # Put your game assets here
 │   ├── icons/            # .png icon files
 │   └── meshes/           # .res mesh files
-└── exported_mods/        # Generated mods appear here
+├── exported_mods/        # Generated mods appear here
+└── example_mod/          # Contains a simple example mod
 ```
 
 ## Creating Content
@@ -72,7 +73,7 @@ ArcaneeringModdingKit/
 ## Export Process
 
 1. Run `mod_export_tool.gd` script
-2. Tool creates proper mod structure in `exported_mods/`
+2. Tool creates proper mod structure in `exported_mods/` **Note:** Sometimes the Godot Editor only updates the new folder after minimizing & maximizing Godot
 3. Converts ModKit classes to game classes
 4. Removes ExtResource references and prepares assets for runtime loading
 5. Generates `mod.json` automatically
@@ -98,7 +99,11 @@ The export system now handles assets specially:
 
 ## Cleanup
 
-Run `mod_cleanup_tool.gd` to delete all working files and start fresh.
+Run `mod_cleanup_tool.gd` to delete all working files and start fresh. **Note:** Sometimes the Godot Editor only updates the folders after minimizing & maximizing Godot
+
+## Example Mod
+
+The provided example mod is a simple proof-of-concept mod that adds a research item to unlock the `Smelter` recipe for `Quantum Essence` (which shares icon/mesh with `Magic Essence`), as well as an objective to produce 10 `Quantum Essence`
 
 ## Tips
 
@@ -107,4 +112,8 @@ Run `mod_cleanup_tool.gd` to delete all working files and start fresh.
 - Resource IDs 1000-1009 are reserved for mods
 - Building IDs 1000-1009 are reserved for mods
 - Test exported mods in actual game before sharing
-- Icons and meshes are optional - defaults will be used if missing
+- Icons and meshes are technically optional - defaults will be used if missing
+
+## Future Plans
+
+Currently, this modding kit can be used to create custom Resources, Recipes, Research, and Objectives. We are planning to also expose Buildings, Spells, Skills, Potions, and Story Events to modding in the future.

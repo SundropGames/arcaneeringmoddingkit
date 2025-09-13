@@ -1,0 +1,12 @@
+[gd_resource type="Resource"  load_steps=1 format=3 uid="uid://dhun1vd7ki20x"]
+
+
+[resource]
+id = "quantum_essence"
+display_name = "Quantum Essence"
+stack_limit = 50
+market_price = 10
+accepted_by = Array[int]([])
+icon = null
+mesh = null
+description = ""

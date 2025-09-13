@@ -1,0 +1,19 @@
+{
+	"author": "ModderName",
+	"description": "A test mod created with the modding kit",
+	"mod_id": "quantum_test_mod",
+	"name": "Quantum Test Mod",
+	"objectives": [
+		"data/objectives/produce_10_quantum_essence.tres"
+	],
+	"recipes": [
+		"data/recipes/smelter_quantum_processing.tres"
+	],
+	"research": [
+		"data/research/quantum_processing.tres"
+	],
+	"resources": [
+		"data/resources/quantum_essence.tres"
+	],
+	"version": "1.0.0"
+}

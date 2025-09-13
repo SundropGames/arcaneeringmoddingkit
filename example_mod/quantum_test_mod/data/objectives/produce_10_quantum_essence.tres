@@ -1,0 +1,16 @@
+[gd_resource type="Resource"  load_steps=1 format=3 uid="uid://bnav6ws4kx1gv"]
+
+
+[resource]
+id = "produce_10_quantum_essence"
+description = "Produce 10 Quantum Essence"
+reward = 300
+xp_reward = 30
+skill_point_reward = 0
+check_type = 1
+target_value = 10
+target_building_type = 0
+target_resource_type = 0
+chest_type = 0
+dependencies = Array[String]([])
+research_dependencies = Array[String](["quantum_processing"])

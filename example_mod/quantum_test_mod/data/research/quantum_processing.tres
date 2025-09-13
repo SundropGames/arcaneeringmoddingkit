@@ -1,0 +1,16 @@
+[gd_resource type="Resource"  load_steps=1 format=3 uid="uid://biduwqugxxfby"]
+
+
+[resource]
+id = "quantum_processing"
+name = "Quantum Processing"
+description = "Infuse Ore with Sundrop energy to obtain Quantum Essence"
+cost = 250
+dependencies = Array[String](["advanced_smelting"])
+objective_dependencies = Array[String]([])
+vegetation_requirements = {}
+effect_type = 0
+affected_building_types = Array[int]([])
+affected_resource_type = 0
+is_hidden = false
+research_category = 1

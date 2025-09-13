@@ -13,3 +13,37 @@ class_name ModKitResearchData
 @export var affected_resource_type: int = 0  # Which resource will be unlocked by this research (as Enum value)
 @export var is_hidden: bool = false  # Whether this research is not available via the research tree (e.g., only in chests or via merchants)
 @export var research_category: int = 0  # Which category this research falls into (0: Foundation, 1: Production, 2: Magic)
+
+# Enum IDs for all buildings from Act I:
+
+#NONE = 0,
+#DELETE = 1,
+#MINER = 2,
+#CONVEYOR_BELT = 3,
+#SMELTER = 4,
+#WAREHOUSE = 5,
+#MANA_CRYSTAL = 6,
+#ASSEMBLER = 7,
+#MARKET = 8,
+#POWER_GENERATOR = 9,
+#SPLITTER = 10,
+#MERGER = 11,
+#ELEVATOR = 12,
+#MANA_FORGE = 13,
+#ELEVATOR_SPLITTER = 14,
+#ELEVATOR_MERGER = 15,
+#HYDRO_GENERATOR = 16,
+#SUPER_SPLITTER = 17,
+#ARCANE_REACTOR = 18,
+#POWER_SPIRE = 19,
+#POTION_CAULDRON = 20,
+#CONVEYOR_BELT_RIGHT = 21,
+#CONVEYOR_BELT_LEFT = 22,
+#SOLAR_RESONATOR = 23,
+#CONVEYOR_BELT_BRIDGE = 24,
+#CONVEYOR_BELT_BRIDGE_LEFT = 25,
+#CONVEYOR_BELT_BRIDGE_RIGHT = 26,
+#WARD_GENERATOR = 27,
+#SOLAR_GENERATOR = 29,
+#ELEVATOR_BRIDGE = 30,
+#BANK = 32,
