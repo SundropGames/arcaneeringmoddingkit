@@ -7,11 +7,13 @@ class_name ModKitRecipe
 @export var outputs: Dictionary[int, int] = {}  # outputs for one turnover, in the form of {1:2}, which would be 2 units of the resource with Enum value of 1 (Ore)
 @export var production_time: float = 5.0  # how many seconds should one production cycle take
 @export var energy_consumption: int = 5  # how much energy does this recipe consume extra
+@export var required_building_level: int = 1  # what level does the building have to be to access this recipe
 @export var required_research: String = ""  # which research ID unlocks this recipe
 @export var byproducts: Dictionary[int, float] = {}  # whether there are possible byproducts for this recipe, in the form of {1: 0.2}, which would be a 20% chance of producing Ore as a byproduct
 @export var mana_consumption: float = 0.0  # how much Mana per production cycle does this recipe consume extra
 @export var heat_production: float = 0.0  # How much heat is produced per crafting cycle (0-100) [Note: anything intended to be used pre-Act II should keep this at 0]
 @export var xp_reward: int = 1  # How much XP to award the building for each crafting cycle
+@export var alternate_recipe: bool = false  # Whether recipe is considered to be alternate (e.g., coming from chests/merchants); mainly used in the online calculator
 
 # Enum IDs for all resources from Act I:
 
@@ -34,4 +36,5 @@ class_name ModKitRecipe
 #SIEGE_CRYSTAL = 16,  # phase 1
 #COAL = 17,  # phase 1
 #CINDER = 18,  # phase 1
+#PURE_ESSENCE = 47,  # phase 1
 #GOLD_COMPONENT = 48,  # phase 1

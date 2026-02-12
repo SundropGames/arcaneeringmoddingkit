@@ -8,7 +8,7 @@ Create mods for Arcaneering: Beyond Automation using this standalone Godot proje
 
 ## Quick Start
 
-1. **Add assets** to `assets/icons/` and `assets/meshes/`
+1. **Add assets** to `assets/icons/` and `assets/meshes/` (note that icons are *optional*, as they can be created automatically on load within the game)
 2. **Create mod content** in `working/` folders using the ModKit classes
 3. **Run export tool** (Tools → Execute Script → mod_export_tool.gd); **Note:** Sometimes the Godot Editor only updates the new folder after minimizing & maximizing Godot
 4. **Copy exported mod** from `exported_mods/` to `%APPDATA%/Godot/app_userdata/Arcaneering/mods/` or directly into the game's `user://mods/`
@@ -112,7 +112,7 @@ The provided example mod is a simple proof-of-concept mod that adds a research i
 - Resource IDs 1000-1009 are reserved for mods
 - Building IDs 1000-1009 are reserved for mods
 - Test exported mods in actual game before sharing
-- Icons and meshes are technically optional - defaults will be used if missing
+- Icons and meshes are technically optional - defaults will be used if missing (icons will be generated in the same style as in-game)
 
 ## Future Plans
 
