@@ -17,6 +17,7 @@ func export_current_mod() -> void:
 	export_recipes(export_path)
 	export_research(export_path)
 	export_objectives(export_path)
+	export_buildings(export_path)
 	copy_assets(export_path)
 	generate_mod_json(export_path)
 	print("Mod exported to: %s" % export_path)
@@ -27,6 +28,7 @@ func create_directories(base_path: String) -> void:
 		base_path + "data/recipes/", 
 		base_path + "data/research/",
 		base_path + "data/objectives/",
+		base_path + "data/buildings/",
 		base_path + "assets/icons/",
 		base_path + "assets/meshes/"
 	]
@@ -44,6 +46,9 @@ func export_research(export_path: String) -> void:
 
 func export_objectives(export_path: String) -> void:
 	copy_and_fix_tres_files("res://working/objectives/", export_path + "data/objectives/", false)
+
+func export_buildings(export_path: String) -> void:
+	copy_and_fix_tres_files("res://working/buildings/", export_path + "data/buildings/", true)
 
 func copy_and_fix_tres_files(source_dir: String, target_dir: String, is_resource: bool) -> void:
 	var dir: DirAccess = DirAccess.open(source_dir)
@@ -97,6 +102,7 @@ func fix_and_copy_tres(source_path: String, target_path: String, is_resource: bo
 				continue
 		var modified_line: String = line
 		modified_line = modified_line.replace('script_class="ModKitResourceData"', '')
+		modified_line = modified_line.replace('script_class="ModKitBuildingData"', '')
 		modified_line = modified_line.replace('script_class="ModKitResearchData"', '')
 		modified_line = modified_line.replace('script_class="ModKitObjectiveData"', '')
 		modified_line = modified_line.replace('script_class="ModKitRecipe"', '')
@@ -171,7 +177,8 @@ func generate_mod_json(export_path: String) -> void:
 		"resources": get_file_list(export_path + "data/resources/"),
 		"recipes": get_file_list(export_path + "data/recipes/"),
 		"research": get_file_list(export_path + "data/research/"),
-		"objectives": get_file_list(export_path + "data/objectives/")
+		"objectives": get_file_list(export_path + "data/objectives/"),
+		"buildings": get_file_list(export_path + "data/buildings/")
 	}
 	var json_file: FileAccess = FileAccess.open(export_path + "mod.json", FileAccess.WRITE)
 	json_file.store_string(JSON.stringify(mod_config, "\t"))

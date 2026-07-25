@@ -10,6 +10,7 @@ func cleanup_modding_kit() -> void:
 	clean_directory("res://working/recipes/")
 	clean_directory("res://working/research/")
 	clean_directory("res://working/objectives/")
+	clean_directory("res://working/buildings/")
 	clean_directory("res://assets/icons/")
 	clean_directory("res://assets/meshes/")
 	clean_directory("res://exported_mods/")

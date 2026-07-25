@@ -21,7 +21,8 @@ ArcaneeringModdingKit/
 │   ├── resources/        # ModKitResourceData
 │   ├── recipes/          # ModKitRecipe  
 │   ├── research/         # ModKitResearchData
-│   └── objectives/       # ModKitObjectiveData
+│   ├── objectives/       # ModKitObjectiveData
+│   └── buildings/        # ModKitBuildingData
 ├── assets/               # Put your game assets here
 │   ├── icons/            # .png icon files
 │   └── meshes/           # .res mesh files
@@ -41,6 +42,16 @@ ArcaneeringModdingKit/
 **Important**: Assets must follow naming convention:
 - Icons: `[resource_id]_icon.png` (e.g., `quantum_crystal_icon.png`)
 - Meshes: `[resource_id].res` (e.g., `quantum_crystal.res`)
+
+### Buildings
+1. Create → Resource → ModKitBuildingData
+2. Set ID, name, cost, size, and category
+3. Set `base_building` to the Enum value of the building whose behaviour you want to reuse. Logistics buildings are not supported as bases
+4. Save to `working/buildings/[building_id].tres`
+
+Your building reuses the base building's scene and script, so no code ships with the mod. Assets
+follow the usual convention (`[building_id]_icon.png`, `[building_id].res`) and are optional (the
+base building's are used otherwise). Prefix recipe IDs with your building ID so they route correctly.
 
 ### Recipes  
 1. Create → Resource → ModKitRecipe
@@ -110,11 +121,14 @@ The provided example mod is a simple proof-of-concept mod that adds a research i
 
 - Use descriptive IDs: "quantum_crystal" not "qc"
 - Follow naming conventions strictly for assets
-- Resource IDs 1000-1009 are reserved for mods
-- Building IDs 1000-1009 are reserved for mods
+- Resource IDs 1000-1009 are reserved for mods (max 10 modded resources across all installed mods)
+- Building IDs 1000-1009 are reserved for mods (max 10 modded buildings across all installed mods)
+- Those slots are assigned at load time in mod load order, so installing or removing another mod can
+  shift them. Test your mod against a fresh save before sharing, and warn players that changing their
+  installed mod set may invalidate existing saves
 - Test exported mods in actual game before sharing
 - Icons and meshes are technically optional - defaults will be used if missing (icons will be generated in the same style as in-game)
 
 ## Future Plans
 
-Currently, this modding kit can be used to create custom Resources, Recipes, Research, and Objectives. We are planning to also expose Buildings, Spells, Skills, Potions, and Story Events to modding in the future.
+Currently, this modding kit can be used to create custom Resources, Recipes, Research, Objectives, and Buildings. We are planning to also expose Spells, Skills, Potions, and Story Events to modding in the future.
