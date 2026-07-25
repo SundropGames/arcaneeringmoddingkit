@@ -45,13 +45,14 @@ ArcaneeringModdingKit/
 ### Recipes  
 1. Create → Resource → ModKitRecipe
 2. Set inputs/outputs using resource IDs (0-999 for base game, 1000+ for modded resources)
-3. Include building type in ID (e.g., "smelter_quantum_processing")
+3. Include building type in ID (e.g., "smelter_quantum_processing"). Anything unmatched falls back to the Assembler.
 4. Save to `working/recipes/`
 
 ### Research
 1. Create → Resource → ModKitResearchData  
-2. Set dependencies, costs, effects
-3. Save to `working/research/`
+2. Set dependencies, costs, effects, phase (1 = Act I, 2 = Act II, 3 = Act III)
+3. Optionally set `resource_requirements` to consume crafted items, or `max_rank` > 0 / -1 to make the node repeatable
+4. Save to `working/research/`
 
 ### Objectives
 1. Create → Resource → ModKitObjectiveData

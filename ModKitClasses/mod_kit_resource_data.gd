@@ -10,7 +10,7 @@ class_name ModKitResourceData
 @export var mesh: Resource = null  # DO NOT SET THIS. INSTEAD: put your mesh into assets/meshes/, with the name [id].res, where id is the unique string you set above. Filepath to the resource mesh (.res; don't make it too big in scale; for context: Ore is a sphere of radius 0.4 and height 0.8, converted into a half-sphere).
 @export_multiline var description: String = ""  # description/flavor text/purpose of resource; for now not used in-game
 
-# Enum IDs for all buildings from Act I:
+# Enum IDs for all buildings:
 
 #NONE = 0,
 #DELETE = 1,
@@ -40,13 +40,39 @@ class_name ModKitResourceData
 #CONVEYOR_BELT_BRIDGE_LEFT = 25,
 #CONVEYOR_BELT_BRIDGE_RIGHT = 26,
 #WARD_GENERATOR = 27,
+#CARAVAN_STATION = 28,
 #SOLAR_GENERATOR = 29,
 #ELEVATOR_BRIDGE = 30,
+#FLUID_EXTRACTOR = 31,
 #BANK = 32,
+#CRUSHER = 33,
+#MANA_BATTERY = 34,
 #PORT = 35,
 #WALL = 36,
 #WALL_CORNER = 37,
 #WALL_TOWER = 38,
+#THROUGHPUT_COUNTER = 39,
+#ARCH = 40,
+#CLIMATE_CONTROLLER = 41,
+#MEGA_MERGER = 42,
 #MANA_CONVERTER = 43,
+#SIGNPOST = 44,
 #MANA_SPIRE = 45,
+#BIG_SMELTER = 46,
 #GENERATOR_MK2 = 47,
+#COMPACT_ASSEMBLER = 48,
+#EXPRESS_BELT = 49,
+#EXPRESS_BELT_RIGHT = 50,
+#EXPRESS_BELT_LEFT = 51,
+#EXPRESS_BELT_BRIDGE = 52,
+#EXPRESS_BELT_BRIDGE_LEFT = 53,
+#EXPRESS_BELT_BRIDGE_RIGHT = 54,
+#PROSPERITY_BEACON = 55,
+#SOLAR_GARDEN = 56,
+#TELEPORT_BEACON = 57,
+#OILWORKS = 58,
+#MANA_LANTERN = 59,
+#TRANS_DEPOT = 60,
+#ESSENCE_FURNACE = 61,
+#PLATFORM = 62,
+#MOD_BUILDING_1..10 = 1000..1009
